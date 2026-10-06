@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Contact - Flask Pages{% endblock %}
+{% block content %}
+<h1>Contact</h1>
+{% if name %}<p id="thanks">Thanks, {{ name }}. We received your message.</p>{% endif %}
+<form method="post" action="/contact">
+  <label for="name">Name</label> <input id="name" name="name" required>
+  <button type="submit">Send</button>
+</form>
+{% endblock %}
